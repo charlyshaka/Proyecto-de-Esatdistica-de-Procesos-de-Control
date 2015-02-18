@@ -13,7 +13,7 @@ plotqcc <- function(n) {
             
             monitor <- paste("00", id_string, ".csv", sep="")
               
-              }
+             	}
   
             
             else if (x >= 10 && x <= 99) {
@@ -46,7 +46,7 @@ plotqcc <- function(n) {
   	attach(tabla) # Declara variables de base de datos
 
   	plot_p<- qcc(x[trial], sizes=size[trial], type="p") # Imprime grafica p de base de datos
-	  plot_q<- qcc(x[trial], sizes=size[trial], type="c", labels=inc) # imprime grafica c de base de datos
+	plot_q<- qcc(x[trial], sizes=size[trial], type="c", labels=inc) # imprime grafica c de base de datos
 }
 }
 
