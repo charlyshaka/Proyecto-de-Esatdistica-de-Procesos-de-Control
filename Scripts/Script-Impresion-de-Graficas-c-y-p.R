@@ -24,6 +24,8 @@ plotqcc <- function(n) {
 	library(qcc)
 
   for(i in data) {
+   
+   
     tabla <- read.csv(i)
     
     good <- complete.cases(tabla)
@@ -34,7 +36,9 @@ plotqcc <- function(n) {
 
   	plot_p<- qcc(x[trial], sizes=size[trial], type="p") # Imprime grafica p de base de datos
 	plot_q<- qcc(x[trial], sizes=size[trial], type="c", labels=inc) # imprime grafica c de base de datos
-}
+
+	}
+
 }
 
 
