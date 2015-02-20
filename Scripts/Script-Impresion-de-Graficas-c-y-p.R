@@ -21,14 +21,14 @@ plotqcc <- function(n) {
                 data[i] <- monitor      
                 #print(monitor)
         }
-	library(qcc)
+	library(qcc) # Se abre la libreria de Estadisticas de Control de Procesos
 
-  for(i in data) {
+  for(i in data) { # Ciclo for para las Tablas de Datos
    
    
-    tabla <- read.csv(i)
+    tabla <- read.csv(i)  # Lectura de Tablas de Datos
     
-    good <- complete.cases(tabla)
+    good <- complete.cases(tabla)   # Se eliminan los NA de las tablas
     
     tabla <- tabla[good, ]
     
