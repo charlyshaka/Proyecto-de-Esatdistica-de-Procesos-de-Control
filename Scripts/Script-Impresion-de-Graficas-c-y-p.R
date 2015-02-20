@@ -30,11 +30,13 @@ plotqcc <- function(n) {
     
     good <- complete.cases(tabla)   # Se eliminan los NA de las tablas
     
-    tabla <- tabla[good, ]
+    tabla <- tabla[good, ] # La tabla se actualiza para graficar las tablas
     
   	attach(tabla) # Declara variables de base de datos
-
-  	plot_p<- qcc(x[trial], sizes=size[trial], type="p") # Imprime grafica p de base de datos
+  
+  	plot_np<-qcc(D[trial], sizes=size[trial], type="np") # Imprime grafica de p variables en Muestras
+  	plot_m<- qcc(D[trial], sizes=size[trial], type="u")# Imprime grafica de medias 
+	plot_p<- qcc(x[trial], sizes=size[trial], type="p") # Imprime grafica p de base de datos
 	plot_q<- qcc(x[trial], sizes=size[trial], type="c", labels=inc) # imprime grafica c de base de datos
 
 	}
