@@ -4,6 +4,7 @@ plotqcc <- function(n) {
   
   data <- vector(mode="character", length=length(id))# Se declara un vector de id longitud
                                                              
+       # Imprimida de nombres de tablas
         for(i in seq_along(id)) {
                 x <- id[i]
                 id_string <- toString(x)
