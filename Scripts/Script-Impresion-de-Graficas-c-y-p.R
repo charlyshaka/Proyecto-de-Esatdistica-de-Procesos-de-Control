@@ -35,8 +35,8 @@ plotqcc <- function(n) {
     
   	attach(tabla) # Declara variables de base de datos
   
-  	plot_np<-qcc(D[trial], sizes=size[trial], type="np") # Imprime grafica de p variables en Muestras
-  	plot_m<- qcc(D[trial], sizes=size[trial], type="u")# Imprime grafica de medias 
+  	plot_np<-qcc(x[trial], sizes=size[trial], type="np") # Imprime grafica de p variables en Muestras
+  	plot_m<- qcc(x[trial], sizes=size[trial], type="u")# Imprime grafica de medias 
 	plot_p<- qcc(x[trial], sizes=size[trial], type="p") # Imprime grafica p de base de datos
 	plot_q<- qcc(x[trial], sizes=size[trial], type="c", labels=inc) # imprime grafica c de base de datos
 
