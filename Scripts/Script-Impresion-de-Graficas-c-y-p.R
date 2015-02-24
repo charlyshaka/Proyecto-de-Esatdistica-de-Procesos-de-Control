@@ -35,6 +35,17 @@ plotqcc <- function(n) {
     
   	attach(tabla) # Declara variables de base de datos
   
+############### Analisis de Shapiro ##########################
+	library(ggplot2)
+	hist(tabla$x,nclass=10, prob=, xlab="Data", main="Hostograma")
+	lines(density(tabla$x))
+	boxplot(tabla$x, main="Grafico de Caja")       ###### Grafico de Cajas
+	qqnorm(tabla$x, main="Grafico Q-Q Normal")     ######## qq Grafica
+	qqline(tabla$x)        ##### Linea de Regresion Lineal
+	shapiro.test(tabla$x) ####### Prueba de Shapiro
+########################################  	
+  	
+  	
   	plot_np<-qcc(x[trial], sizes=size[trial], type="np") # Imprime grafica de p variables en Muestras
   	plot_m<- qcc(x[trial], sizes=size[trial], type="u")# Imprime grafica de medias 
 	plot_p<- qcc(x[trial], sizes=size[trial], type="p") # Imprime grafica p de base de datos
